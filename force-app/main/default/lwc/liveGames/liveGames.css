@@ -1,0 +1,16 @@
+td{
+    padding-bottom: 3%;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold
+}
+p{
+    background-color: rgb(84, 91, 92);
+    color:white;
+    border-radius: 5px;
+    font-size: 30px;
+
+}
+.around-text{
+    padding:2%
+}

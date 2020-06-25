@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title={league} icon-name="utility:activity">
+            
+                <lightning-layout multiple-rows="true" class="slds-card_boundary">
+                    <template if:true={data}>    
+                    <lightning-datatable
+                        key-field="id"
+                        data={data}
+                        columns={columns}
+                        hide-checkbox-column=true>
+                    </lightning-datatable>
+                    </template>   
+                </lightning-layout>
+                <template if:true={showspin}>
+                <lightning-spinner alternative-text="Loading"></lightning-spinner>
+            </template>
+    </lightning-card> 
+</template>

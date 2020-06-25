@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Upcoming Fixtures" icon-name="standard:custom_notification">
+        <template if:true={jsonObj}>
+        <table>
+            <template for:each={groupArrays} for:item="g">
+                <div key={g}>
+                   <p class="slds-text-heading_large">{g.date}</p>
+                </div>
+                <div  key={g} class="around-text">
+                <template for:each={g.games} for:item="ga">
+                    <tr key={ga}>
+                    
+                        <td>{ga.homeTeam.name}&nbsp;&nbsp;</td>
+                        <td><span style="border-radius:5px;background-color:rgb(224, 224, 224) ;">{ga.t}</span>&nbsp;</td>
+                         <td>&nbsp;&nbsp;{ga.awayTeam.name}</td>
+                    
+                    </tr>
+                    
+                </template>
+            </div>
+                <hr key={g}>
+            </template>
+        </table>
+    </template>
+    <template if:true={showSpinner}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+    </lightning-card>
+</template>

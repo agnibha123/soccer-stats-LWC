@@ -1,0 +1,113 @@
+<template>
+    <lightning-tabset active-tab-value="one">
+        <lightning-tab label="EPL" value="one">
+            <lightning-tabset active-tab-value="one" variant="scoped">
+                <lightning-tab label="Standing" value="one">
+            <c-football-standings league={EPL.name} l={EPL.ID}></c-football-standings>
+           </lightning-tab>
+        <lightning-tab label="Top Scorers" value="two">
+            <c-top-scorrer l={EPL.ID}></c-top-scorrer>
+        </lightning-tab>
+        <lightning-tab label="Scheduled Games" value="three">
+        <c-fixtures l={EPL.ID}></c-fixtures>
+        </lightning-tab>
+        <lightning-tab label="Live Matches *" value="four">
+        <c-live-games l={EPL.ID}></c-live-games>
+        </lightning-tab>
+        <lightning-tab label="Team List" value="five">
+        <c-team-list  l={EPL.ID}></c-team-list>
+        </lightning-tab>
+            </lightning-tabset>
+        </lightning-tab>
+       <!----> 
+       <lightning-tab label="Bundesliga" value="two">
+        <lightning-tabset active-tab-value="one" variant="scoped">
+            <lightning-tab label="Standing" value="one">
+                <c-football-standings league={BL.name} l={BL.ID}></c-football-standings>
+       </lightning-tab>
+    <lightning-tab label="Top Scorers" value="two">
+        <c-top-scorrer l={BL.ID}></c-top-scorrer>
+    </lightning-tab>
+    <lightning-tab label="Scheduled Games" value="three">
+        <c-fixtures l={BL.ID}></c-fixtures>
+    </lightning-tab>
+    <lightning-tab label="Live Matches *" value="four">
+        <c-live-games  l={BL.ID}></c-live-games>
+    </lightning-tab>
+    <lightning-tab label="Team List" value="five">
+        <c-team-list  l={BL.ID}></c-team-list>
+    </lightning-tab>
+        </lightning-tabset>
+    </lightning-tab>
+    <lightning-tab label="La Liga" value="three">
+        <lightning-tabset active-tab-value="one" variant="scoped">
+            <lightning-tab label="Standing" value="one">
+                <c-football-standings league={LaLiga.name} l={LaLiga.ID}></c-football-standings>
+       </lightning-tab>
+    <lightning-tab label="Top Scorers" value="two">
+        <c-top-scorrer l={LaLiga.ID}></c-top-scorrer>
+    </lightning-tab>
+    <lightning-tab label="Scheduled Games" value="three">
+        <c-fixtures l={LaLiga.ID}></c-fixtures>
+    </lightning-tab>
+    <lightning-tab label="Live Matches *" value="four">
+        <c-live-games  l={LaLiga.ID}></c-live-games>
+    </lightning-tab>
+    <lightning-tab label="Team List" value="five">
+        <c-team-list  l={LaLiga.ID}></c-team-list>
+    </lightning-tab>
+        </lightning-tabset>
+    </lightning-tab>
+    <lightning-tab label="League 1" value="four">
+        <lightning-tabset active-tab-value="one" variant="scoped">
+            <lightning-tab label="Standing" value="one">
+                <c-football-standings league={L1.name} l={L1.ID}></c-football-standings>
+       </lightning-tab>
+    <lightning-tab label="Top Scorers" value="two">
+        <c-top-scorrer l={L1.ID}></c-top-scorrer>
+    </lightning-tab>
+    <lightning-tab label="Scheduled Games" value="three">
+        <c-fixtures l={L1.ID}></c-fixtures>
+    </lightning-tab>
+    <lightning-tab label="Live Matches *" value="four">
+        <c-live-games  l={L1.ID}></c-live-games>
+    </lightning-tab>
+    <lightning-tab label="Team List" value="five">
+        <c-team-list  l={L1.ID}></c-team-list>
+    </lightning-tab>
+        </lightning-tabset>
+    </lightning-tab>
+    <lightning-tab label="Serie A" value="five">
+        <lightning-tabset active-tab-value="one" variant="scoped">
+            <lightning-tab label="Standing" value="one">
+                <c-football-standings league={SA.name} l={SA.ID}></c-football-standings>
+       </lightning-tab>
+    <lightning-tab label="Top Scorers" value="two">
+        <c-top-scorrer l={SA.ID}></c-top-scorrer>
+    </lightning-tab>
+    <lightning-tab label="Scheduled Games" value="three">
+        <c-fixtures l={SA.ID}></c-fixtures>
+    </lightning-tab>
+    <lightning-tab label="Live Matches *" value="four">
+        <c-live-games  l={SA.ID}></c-live-games>
+    </lightning-tab>
+    <lightning-tab label="Team List" value="five">
+        <c-team-list  l={SA.ID}></c-team-list>
+    </lightning-tab>
+        </lightning-tabset>
+    </lightning-tab>
+       <!---->
+        <!--<lightning-tab label="Bundesliga" value="two">
+            <c-football-standings league={BL.name} l={BL.ID}></c-football-standings>
+        </lightning-tab>
+        <lightning-tab label="La Liga" value="three">
+            <c-football-standings league={LaLiga.name} l={LaLiga.ID}></c-football-standings>
+        </lightning-tab>
+        <lightning-tab label="League 1" value="four">
+            <c-football-standings league={L1.name} l={L1.ID}></c-football-standings>
+        </lightning-tab>
+        <lightning-tab label="Serie A" value="five">
+            <c-football-standings league={SA.name} l={SA.ID}></c-football-standings>
+        </lightning-tab>-->
+    </lightning-tabset>
+</template>

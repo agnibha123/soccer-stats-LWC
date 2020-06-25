@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Live Games" icon-name="standard:custom_notification">
+        <template if:true={data}>
+        <p class="slds-text-heading_large">Live Games</p>
+        <br>
+        <table>
+           <template for:each={data} for:item="g">
+               
+                    <tr key={g}>
+                        <td>{g.homeTeam.name}&nbsp;</td>
+                        <td><span style="border-radius:5px;background-color:rgb(169, 255, 152) ;color:rgba(21, 94, 25, 0.582);">{g.score.fullTime.homeTeam}-{g.score.fullTime.awayTeam}</span>&nbsp;</td>
+                        <td>&nbsp;{g.awayTeam.name}</td>
+                    
+                    </tr>
+             
+            </template>
+        </table>
+    </template>
+    <template if:false={dummy}>
+        <span class="slds-text-heading_large">No Live Games</span>
+    </template>
+    <template if:true={showSpinner}>
+        <lightning-spinner alternative-text="Loading"></lightning-spinner>
+    </template>
+
+    </lightning-card>
+</template>
